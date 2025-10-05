@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSHITHI ONE | MarketPlace</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="mkstyle.css" />
+
+  <!-- Chart.js for bar chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div>
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <strong class="title">KSHITHI ONE</strong>
+    </div>
+    <div class="menu" id="menu">
+      <a href="../heropage/index.html">Home</a>
+      <a href="../loginpage/farmer-login.html">Farmer Login</a>
+      <a href="../loginpage2/va-login.html">VA Login</a>
+      <a href="market-index.html">Marketplace</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="map"></div>
+    <div class="data-section">
+      <h2>MarketPlace Listings</h2>
+      <p>Available lands for sale (Price per acre: ₹5,300,000)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Owner</th>
+            <th>Area (acres)</th>
+            <th>Price (₹)</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <canvas id="barChart" height="120"></canvas>
+    </div>
+  </main>
+
+  <footer>© 2025 KSHITHI ONE | Empowering Farmers 🌾</footer>
+
+  <!-- JS -->
+  <script src="mkscript.js"></script>
+
+  <!-- ✅ Add your Google Maps API key here -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciPsvdxOy-OnesSpduDg_g-mojbC-NGI &callback=initMap">
+  </script>
+</body>
+</html>

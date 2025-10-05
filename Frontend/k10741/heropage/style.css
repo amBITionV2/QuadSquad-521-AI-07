@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin: 10px 0 30px;
+  width: 90%;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tiles-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37); /* Match marketplace shadow */
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sub-tiles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.sub-tile {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.sub-tile:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.sub-tile img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.forest-img {
+  margin-top: 20px;
+  width: 230px;
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#footer-btn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+#footer-names {
+  margin-top: 10px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Add below existing .tile styles */
+.glass-market {
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  position: relative;
+}
+
+.market-img {
+  width: 90%;
+  max-width: 220px;
+  margin: 18px auto 10px auto;
+  display: block;
+  border-radius: 12px;
+  opacity: 0.95;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+
+/* Add below existing styles */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  background: transparent;
+  margin-right: 8px;
+}
+
+/* Add below existing styles */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 18px 0 rgba(31,38,135,0.18);
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.glass-btn:hover {
+  background: rgba(255,255,255,0.32);
+  transform: translateY(-2px) scale(1.04);
+  color: #e0e0e0;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KSHITHI ONE - VA Dashboard</title>
+
+  <!-- main CSS for VA dashboard -->
+  <link rel="stylesheet" href="va-style.css" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="va-header">
+    <div class="header-left">
+      <div id="menu">☰</div>
+      <h1 class="site-title">KSHITHI ONE</h1>
+    </div>
+    <div id="username" class="username"></div>
+  </header>
+
+  <!-- HAMBURGER MENU LINKS -->
+  <nav class="menu-links" id="menuLinks" aria-hidden="true">
+    <a href="../heropage/index.html">🏠 Home</a>
+    <a href="../loginpage/farmer-login.html">👨‍🌾 Farmer Login</a>
+    <a href="../loginpage2/va-login.html">📋 VA Login</a>
+    <a href="../marketplace/market-index.html">🛒 Marketplace</a>
+  </nav>
+
+  <!-- MAIN LAYOUT: left map (40%) + right panel (60%) -->
+  <main class="va-main">
+    <section id="map" class="va-map" aria-label="Map area"></section>
+
+    <aside class="va-panel" id="vaPanel">
+      <div class="panel-header">
+        <h2>Scheme Analytics</h2>
+        <p class="hint">Select a scheme tile → View Analytics</p>
+      </div>
+
+      <div id="schemeTiles" class="scheme-tiles">
+        <!-- tiles inserted here by va-script.js -->
+      </div>
+
+      <div id="analyticsArea" class="analytics-area hidden">
+        <h3 id="analyticsTitle"></h3>
+
+        <div class="analytics-layout">
+          <div class="table-wrapper">
+            <h4>Owners & Status</h4>
+            <div class="table-scroll" id="ownersTable"></div>
+          </div>
+
+          <div class="chart-wrapper">
+            <h4>Summary</h4>
+            <canvas id="summaryChart" width="300" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="va-footer">
+    <button id="footer-btn">amBITion V2</button>
+    <div id="footer-names" class="hidden footer-names">
+      <p>© 2025 KSHITHI ONE | Empowering Farmers 🌾</p>
+    </div>
+  </footer>
+
+  <!-- VA script -->
+  <script src="va-script.js"></script>
+
+  <!-- Google Maps JS: replace YOUR_API_KEY -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDciPsvdxOy-OnesSpduDg_g-mojbC-NGI&callback=initMap">
+  </script>
+</body>
+</html>

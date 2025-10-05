@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin: 10px 0 30px;
+  width: 90%;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.tiles-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.sub-tiles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.sub-tile {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.sub-tile:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.sub-tile img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+.forest-img {
+  margin-top: 20px;
+  width: 80px;
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+#footer-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#footer-btn:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+#footer-names {
+  margin-top: 10px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .tiles-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* --- Header --- */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.menu-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* --- Sidebar Menu --- */
+.sidebar {
+  position: fixed;
+  top: 95px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --- Login Page --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+.login-box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.login-box h2 {
+  margin-bottom: 15px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tab-buttons button.active {
+  background: rgba(255,255,255,0.4);
+}
+
+.form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.form button {
+  background: rgba(255,255,255,0.3);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background: rgba(255,255,255,0.5);
+}
+
+#message {
+  margin-top: 10px;
+  color: #ffcccb;
+  min-height: 20px;
+}

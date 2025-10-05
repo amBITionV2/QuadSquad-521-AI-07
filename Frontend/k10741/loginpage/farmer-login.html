@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Login - KSHITHI ONE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="menu-icon" id="menu-toggle">&#9776;</div>
+    <h1 class="logo">KSHITHI ONE</h1>
+  </header>
+
+  <nav id="sidebar" class="sidebar hidden">
+    <a href="../heropage/index.html">🏠 Home</a>
+    <a href="farmer-login.html">👨‍🌾 Farmer Login</a>
+    <a href="../loginpage2/va-login.html">🏛️ VA Login</a>
+    <a href="../marketplace/market-index.html">🛒 Marketplace</a>
+  </nav>
+
+  <main class="login-container">
+    <div class="login-box">
+      <h2>Farmer Portal</h2>
+
+      <div class="tab-buttons">
+        <button id="login-tab" class="active">Login</button>
+        <button id="signup-tab">Signup</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="form active">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+
+      <!-- Signup Form --> 
+      <form id="signup-form" class="form hidden">
+        <input type="text" id="signup-name" placeholder="Name" required>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <p id="message"></p>
+    </div>
+  </main>
+
+  <footer>
+    <button id="footer-btn">amBITion V2</button>
+    <div id="footer-names" class="hidden">
+      <p>Murali Ganesh</p><p>Hemanth</p><p>Chiranthana</p><p>Prajna KC</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
